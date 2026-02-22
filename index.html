@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 전 직원 AI 전환 핵심 특강 - IGM 세계경영연구원</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts (Pretendard) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .accordion-content { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; max-height: 0; opacity: 0; overflow: hidden; }
+        .accordion-content.open { max-height: none; opacity: 1; overflow: visible; }
+        .accordion-icon { transition: transform 0.3s ease; }
+        .accordion-button.open .accordion-icon { transform: rotate(180deg); }
+        .gradient-text { background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .float-1 { animation: float 6s ease-in-out infinite; }
+        .float-2 { animation: float 5.5s ease-in-out infinite 1.5s; }
+        .float-3 { animation: float 7s ease-in-out infinite 0.5s; }
+        .float-4 { animation: float 6.5s ease-in-out infinite 2s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold">IGM</div>
+                    <span class="font-bold text-xl text-gray-900">세계경영연구원</span>
+                </div>
+                <div>
+                    <a href="https://forms.office.com/pages/responsepage.aspx?id=eaoAnraNNk2oknR-7JmTTacJhAALfmBKjerx2r4k6wdUNkxaUkE5WEIzR1ZIS0c4SkQ1Vk5TNllEWC4u&route=shorturl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition shadow-sm">
+                        특강 요청 문의
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-slate-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Background Image & Floating AI Logos Overlay -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-1/2 z-0">
+            <!-- Background Image -->
+            <div class="absolute inset-0" style="-webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop" alt="Corporate AI Workstyle" class="w-full h-full object-cover object-[center_right] opacity-60">
+            </div>
+            
+            <!-- Floating AI Logos Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-16 z-10 pointer-events-none hidden sm:flex">
+                <div class="relative w-[360px] h-[360px]">
+                    <!-- ChatGPT -->
+                    <div class="absolute top-0 left-0 bg-slate-800/80 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 bg-[#10A37F] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#10A37F]/40">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.073zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5973 8.3829v-2.3324a.0757.0757 0 0 1 .0332-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66l-.1467-.0852-4.783-2.7582a.7806.7806 0 0 0-.7806 0l-5.8428 3.3685zm.4258 7.2144l-.142.0852-4.783-2.7582a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685v-2.3324a.0804.0804 0 0 1 .0332-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802-4.66l.1467.0852v6.7369a.7948.7948 0 0 0 .3927.6813l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945-4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                        </div>
+                        <span class="text-white font-bold text-[15px] tracking-wide pr-2">ChatGPT</span>
+                    </div>
+
+                    <!-- Gemini -->
+                    <div class="absolute top-20 right-0 bg-slate-800/80 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-tr from-blue-500 via-purple-500 to-yellow-400 rounded-full flex items-center justify-center text-white shadow-lg shadow-purple-500/40">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z"/></svg>
+                        </div>
+                        <span class="text-white font-bold text-[15px] tracking-wide pr-2">Gemini</span>
+                    </div>
+
+                    <!-- Claude -->
+                    <div class="absolute bottom-20 left-4 bg-slate-800/80 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 bg-[#D97757] rounded-xl flex items-center justify-center text-white font-serif italic font-bold text-xl shadow-lg shadow-[#D97757]/40">
+                            C
+                        </div>
+                        <span class="text-white font-bold text-[15px] tracking-wide pr-2">Claude</span>
+                    </div>
+
+                    <!-- NotebookLM -->
+                    <div class="absolute bottom-0 right-12 bg-slate-800/80 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/40">
+                            <i data-lucide="book-text" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-white font-bold text-[15px] tracking-wide pr-2">NotebookLM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gradient Overlay (텍스트 가독성을 위해 좌측 어둡게 처리) -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent z-0 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-slate-900 to-transparent z-0 pointer-events-none"></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10 flex items-center">
+            <!-- 텍스트 영역 (좌측 60% 차지) -->
+            <div class="w-full lg:w-3/5 text-left text-white">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                    2026 기업 맞춤형 인하우스 교육
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-snug break-keep">
+                    2026 전 직원<br>
+                    AI 업무혁명 특강 시리즈
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-gray-300 font-medium mb-4">
+                    "우리 회사의 AI 전환, 무엇을 먼저 바꿔야 할까요?"
+                </p>
+                <p class="mt-6 text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed font-light break-keep">
+                    AI 경쟁 구도부터 <span class="text-orange-500 font-bold">일하는 방식, 산업 전략, 고객경험</span>까지.<br class="hidden sm:block mt-3">
+                    우리 조직이 무엇을 먼저 바꿔야 성과로 이어지는지 한 번에 정리해 드립니다.
+                </p>
+                <div class="flex flex-wrap justify-start gap-4">
+                    <a href="#curriculum" class="px-8 py-3.5 border border-transparent text-base font-semibold rounded-lg text-slate-900 bg-white hover:bg-gray-100 transition shadow-lg">
+                        특강주제 보기
+                    </a>
+                    <a href="#contact" class="px-8 py-3.5 border border-white/30 text-base font-semibold rounded-lg text-white hover:bg-white/10 transition backdrop-blur-sm">
+                        문의하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: 4 Key Questions -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">AI Transformation Check</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    2026년을 위한 4가지 핵심 질문
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    이 질문에 답할 준비가 되셨습니까?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Q1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition hover:-translate-y-1 duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Q1. Strategy</span>
+                        <span class="text-xs text-gray-500 font-semibold">전략</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-snug break-keep">AI 경쟁의 무대는 어디로 이동하고 있는가?</h3>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition hover:-translate-y-1 duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Q2. Work</span>
+                        <span class="text-xs text-gray-500 font-semibold">업무</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-snug break-keep">AI 시대, 일은 어떻게 재구성되는가?</h3>
+                </div>
+                <!-- Q3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition hover:-translate-y-1 duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded">Q3. Market</span>
+                        <span class="text-xs text-gray-500 font-semibold">시장</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-snug break-keep">기술로 시장을 만들 것인가, 따라갈 것인가?</h3>
+                </div>
+                <!-- Q4 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition hover:-translate-y-1 duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Q4. Customer</span>
+                        <span class="text-xs text-gray-500 font-semibold">고객</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-snug break-keep">고객경험은 어떻게 '경쟁 자산'이 되는가?</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Curriculum Accordion -->
+    <section id="curriculum" class="py-20 relative overflow-hidden bg-[#222222]">
+        <!-- Subtle glowing effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-1/2 bg-orange-500/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-4">10대 핵심 특강 커리큘럼</h2>
+                <p class="text-lg text-gray-400">조직의 상황과 목표에 맞춰 커스터마이징이 가능합니다.</p>
+            </div>
+
+            <div class="space-y-4" id="accordion-container">
+                <!-- Curriculum items will be injected here by JavaScript -->
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <a href="https://forms.office.com/pages/responsepage.aspx?id=eaoAnraNNk2oknR-7JmTTacJhAALfmBKjerx2r4k6wdUNkxaUkE5WEIzR1ZIS0c4SkQ1Vk5TNllEWC4u&route=shorturl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 text-white font-bold hover:text-gray-200 transition bg-[#333333] px-8 py-4 rounded-full shadow-lg border border-[#444444] hover:bg-[#444444]">
+                    <span>우리 기업에 맞는 특강주제 상담받기</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-600 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <!-- Message -->
+                <div class="p-10 md:p-12 md:w-3/5 text-white flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-700 opacity-50" style="clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-4">교육 문의 (기업 인하우스 특강)</h2>
+                        <p class="text-blue-100 text-lg mb-8 leading-relaxed font-medium">
+                            "2026년의 AI 경쟁력,<br>조직의 빠른 인식전환이 결정합니다."
+                        </p>
+                        <p class="text-blue-100 text-sm mb-6">
+                            일정 및 교육비 등 세부 사항은 기업별 맞춤으로 진행 가능하오니<br class="hidden sm:block"> 담당자에게 편하게 문의해 주시기 바랍니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- Info -->
+                <div class="p-10 md:p-12 md:w-2/5 bg-white flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">주관</p>
+                            <p class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                                <i data-lucide="building-2" class="w-5 h-5 text-blue-500"></i> IGM 세계경영연구원
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">담당</p>
+                            <p class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                                <i data-lucide="user" class="w-5 h-5 text-blue-500"></i> 디지털인재혁신본부 허효선 과장
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">연락처</p>
+                            <a href="tel:02-2036-8323" class="text-lg font-bold text-blue-600 hover:text-blue-800 transition flex items-center gap-2">
+                                <i data-lucide="phone" class="w-5 h-5 text-blue-500"></i> 02-2036-8323
+                            </a>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">이메일</p>
+                            <a href="mailto:mhahn@igm.or.kr" class="text-lg font-bold text-blue-600 hover:text-blue-800 transition flex items-center gap-2 break-all">
+                                <i data-lucide="mail" class="w-5 h-5 text-blue-500"></i> hsheo@igm.or.kr
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 text-center text-gray-400">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="font-semibold text-gray-300 mb-2">IGM 세계경영연구원</p>
+            <p class="text-sm mb-6">서울특별시 중구 장충단로 8길 11-16 | 대표전화 02-2036-8300</p>
+            <p class="text-sm text-gray-600">© 2026 IGM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dynamic Curriculum and Icons -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Curriculum Data
+        const curriculumData = [
+            {
+                id: "01",
+                title: "AI 메가트렌드 2026",
+                message: "성능(Performance) 경쟁의 시대가 저물고, 경제 구조(Economic Structure)의 경쟁이 시작됩니다.",
+                points: [
+                    "왜 AI는 '성능 경쟁'에서 '경제 구조 경쟁'으로 이동하는가",
+                    "AI의 한계는 기술이 아니라 전력 · 비용 · 인프라인 이유",
+                    "에이전트와 피지컬 AI는 어떤 산업의 판을 바꾸는가"
+                ]
+            },
+            {
+                id: "02",
+                title: "AI 시대, 일하는 방식의 전환",
+                message: "'AI를 쓰는 사람'을 넘어 'AI와 일하는 조직'으로 시스템을 재편해야 합니다.",
+                points: [
+                    "AI는 어떤 일을 자동화하고, 어떤 일을 증폭 시키는가",
+                    "'AI를 쓰는 사람'과 'AI와 일하는 조직'의 차이",
+                    "개인 생산성 → 팀 구조 → 조직 운영 방식의 변화"
+                ]
+            },
+            {
+                id: "03",
+                title: "산업별 생존과 성장의 기술 전략",
+                message: "모든 산업에 동일한 AI 전략은 없습니다. 우리 산업에 맞는 '성장의 기술'을 정의합니다.",
+                points: [
+                    "모든 산업에 동일한 AI 전략이 실패하는 이유",
+                    "'시장 창출형 / 기술 확장형 / 운영 혁신형' 전략 구분",
+                    "PoC는 성공했지만, 확산에 실패하는 기업의 공통 패턴"
+                ]
+            },
+            {
+                id: "04",
+                title: "생성형 AI가 바꾸는 고객경험(CX) 혁신",
+                message: "설계된 경험(CX)에서, 학습하고 예측하는 경험(ACX)으로 이동합니다.",
+                points: [
+                    "왜 지금 CX 혁신이 아니라 'ACX 전환'인가",
+                    "고객경험이 '설계'에서 '학습 · 자동화'로 이동하는 구조",
+                    "생성형 AI가 CX를 비용이 아닌 경쟁 자산으로 만드는 방식"
+                ]
+            },
+            {
+                id: "05",
+                title: "Physical AI와 산업 패권의 재편",
+                message: "기술이 ‘몸’을 갖는 순간, 산업의 승자가 바뀐다.",
+                points: [
+                    "디지털 AI와 Physical AI의 결정적 차이",
+                    "모빌리티·제조·물류에서 AI가 ‘비용 절감 기술’이 아닌 ‘패권 기술’이 되는 구조",
+                    "Physical AI 투자에서 실패하는 기업의 공통 오류"
+                ]
+            },
+            {
+                id: "06",
+                title: "생성형 AI 이후, 인간의 역할은 무엇인가",
+                message: "AGI 전야(前夜), 살아남는 개인과 조직의 조건.",
+                points: [
+                    "생성형 AI는 ‘도구’가 아니라 인간 능력의 재정의 변수",
+                    "기술 발전 속도와 인간·조직의 적응 속도 간 격차 리스크",
+                    "AI 시대에 경쟁력을 잃는 조직의 공통 패턴"
+                ]
+            },
+            {
+                id: "07",
+                title: "AI 전환, 생존을 넘어 재탄생으로",
+                message: "상위 1% 기업은 왜 AI로 조직을 다시 설계하는가.",
+                points: [
+                    "AI 전환의 본질은 기술이 아니라 조직·인재·문화의 재설계",
+                    "‘AI 도입 기업’과 ‘AI 네이티브 기업’을 가르는 결정적 차이",
+                    "PoC는 성공했지만 확산에 실패하는 조직의 공통 특징"
+                ]
+            },
+            {
+                id: "08",
+                title: "2026 AI 트렌드, 기술이 아니라 ‘경영 변수’로",
+                message: "AI는 IT 이슈가 아니라 경영 의사결정의 전제조건이다.",
+                points: [
+                    "2026년 AI 트렌드의 핵심 변화 : 기술 경쟁 → 경영 적용경쟁",
+                    "산업별로 다른 AI 투자 논리",
+                    "AI를 ‘도입 프로젝트’로 관리하는 기업이 실패하는 이유"
+                ]
+            },
+            {
+                id: "09",
+                title: "AI가 시간을 돌려주는 시대의 기획 전략",
+                message: "생성형 AI 시대, 브랜드·기획·마케팅은 어떻게 달라지는가.",
+                points: [
+                    "생성형 AI는 효율 도구가 아니라 사고 확장 엔진",
+                    "브랜드·기획 영역에서 AI를 잘못 쓰는 대표적 방식",
+                    "AI 시대에도 대체되지 않는 인간 고유의 기획 역량"
+                ]
+            },
+            {
+                id: "10",
+                title: "유입 중심 사고를 넘어, GEO 관점의 마케팅 전략",
+                message: "검색 · 의도 · 데이터로 재설계하는 AI 마케팅.",
+                points: [
+                    "검색 데이터와 생성형 AI가 만드는 ‘의도 기반 시장 구조’",
+                    "퍼포먼스 마케팅이 한계에 부딪히는 구조적 이유",
+                    "AI 마케팅 PoC는 성공했지만 성과가 지속되지 않는 기업의 공통 문제"
+                ]
+            }
+        ];
+
+        const container = document.getElementById('accordion-container');
+
+        curriculumData.forEach((item, index) => {
+            const isExpanded = true;
+            const itemHTML = `
+                <div class="bg-[#2a2a2a]/90 backdrop-blur-sm border border-[#3f3f3f] rounded-xl shadow-lg overflow-hidden mb-4 transition hover:border-[#555555]">
+                    <button class="accordion-button w-full px-6 py-5 flex items-center justify-between focus:outline-none hover:bg-[#333333] transition ${isExpanded ? 'open' : ''}">
+                        <div class="flex items-center gap-4 text-left">
+                            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1a1a1a] text-orange-500 flex items-center justify-center font-bold text-sm border border-orange-500/20">
+                                ${item.id}
+                            </span>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">${item.title}</h3>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-gray-400"></i>
+                    </button>
+                    <div class="accordion-content bg-[#222222] ${isExpanded ? 'open' : ''}">
+                        <div class="px-6 py-5 border-t border-[#3f3f3f]">
+                            <div class="mb-5">
+                                <span class="inline-block px-3 py-1 bg-[#333333] text-orange-400 text-sm font-semibold rounded-md mb-3 border border-[#444444]">핵심 메시지</span>
+                                <p class="text-gray-200 font-medium leading-relaxed">${item.message}</p>
+                            </div>
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-[#1a1a1a] text-gray-400 text-sm font-semibold rounded-md mb-3 border border-[#333333]">Key Points</span>
+                                <ul class="space-y-2 mt-2">
+                                    ${item.points.map(point => `
+                                        <li class="flex items-start gap-3 text-gray-400">
+                                            <i data-lucide="check-circle-2" class="w-5 h-5 text-white flex-shrink-0 mt-0.5"></i>
+                                            <span class="leading-relaxed">${point}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', itemHTML);
+        });
+
+        // Re-initialize icons for newly injected HTML
+        lucide.createIcons();
+
+    </script>
+</body>
+</html>
